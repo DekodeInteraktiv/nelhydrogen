@@ -1,0 +1,90 @@
+{
+  "key": "group_57399b309a727",
+  "title": "Options Contact",
+  "fields": [
+    {
+      "key": "field_575c2ca1016de",
+      "label": "Contact form",
+      "name": "contact_form",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "1": "Contact",
+        "2": "Investor relations"
+      },
+      "default_value": [],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": "",
+      "disabled": 0,
+      "readonly": 0,
+      "return_format": "value"
+    },
+    {
+      "key": "field_57399b37f3f1c",
+      "label": "Main email",
+      "name": "main_email",
+      "type": "email",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_57399b51f3f1d",
+      "label": "Main phone",
+      "name": "main_phone",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": "",
+      "readonly": 0,
+      "disabled": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "options-contact"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228433
+}

@@ -1,0 +1,41 @@
+{
+  "key": "group_5b425021d646b",
+  "title": "Media settings",
+  "fields": [
+    {
+      "key": "field_5b44a67bc4006",
+      "label": "Publish date",
+      "name": "publish_date",
+      "type": "date_picker",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "display_format": "d\/m\/Y",
+      "return_format": "d\/m\/Y",
+      "first_day": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "attachment",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228343
+}

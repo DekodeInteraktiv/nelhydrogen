@@ -1,0 +1,9 @@
+.icon-file {
+  @include icon-before('\65');
+  &:before {
+    font-size: 0.75em;
+    position: relative;
+    top: -0.15em;
+    margin-right: 0.25rem;
+  }
+}

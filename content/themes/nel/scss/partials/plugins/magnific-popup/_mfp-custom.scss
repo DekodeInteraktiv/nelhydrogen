@@ -1,0 +1,53 @@
+button.mfp-close {
+  top: rem-calc(20);
+  right: rem-calc(20);
+  background: $white;
+  color: $primary-color;
+  border-radius: 9999px;
+  &:hover {
+    background: $primary-color;
+    color: $white;
+  }
+  @include breakpoint(medium) {
+    top: rem-calc(40);
+    right: rem-calc(40);
+  }
+}
+
+.mfp-close-btn-in {
+  button.mfp-close {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid $light-gray;
+    opacity: 1;
+    display: block;
+    top: -12px;
+    right: -12px;
+    box-shadow: 0 0 3px rgba($medium-gray, 0.25);
+    &:hover {
+      background: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+    }
+    @include breakpoint(medium) {
+      top: -(rem-calc(10));
+      right: -(rem-calc(10));
+    }
+  }
+}
+
+//
+.mfp-html5-video {
+  .mfp-content {
+    max-width: 1280px;
+    @include breakpoint(medium) {
+      padding: 40px;
+    }
+  }
+}
+
+.mfp-preloader {
+  color: $white;
+}

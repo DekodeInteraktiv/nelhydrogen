@@ -1,0 +1,67 @@
+{
+  "key": "group_5b4223004d7e9",
+  "title": "Nav menu item settings",
+  "fields": [
+    {
+      "key": "field_5b42230abb5eb",
+      "label": "Featured Image",
+      "name": "featured_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "id",
+      "preview_size": "thumbnail",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": ""
+    },
+    {
+      "key": "field_5a26723d537d5",
+      "label": "Insert after section",
+      "name": "insert_after_section",
+      "type": "text",
+      "instructions": "On some pages, menu items are automatically added to the submenu based on sections in the pagebuilder. This setting makes it possible to fit the menu item in between sections. (This will be replaced by a better solution)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "nav_menu_item",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1534930913
+}

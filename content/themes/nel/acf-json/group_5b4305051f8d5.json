@@ -1,0 +1,70 @@
+{
+  "key": "group_5b4305051f8d5",
+  "title": "Media Category settings",
+  "fields": [
+    {
+      "key": "field_5b43050968d8f",
+      "label": "Short title",
+      "name": "category_short_title",
+      "type": "text",
+      "instructions": "A short version of the category title (ie: Quarterly Presentation -> Presentation)",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5b43051968d90",
+      "label": "Color",
+      "name": "category_color",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "default": "White",
+        "purple": "Purple",
+        "black": "Black",
+        "gray": "Gray"
+      },
+      "default_value": [],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 0,
+      "ajax": 0,
+      "return_format": "value",
+      "placeholder": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "media_category"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228348
+}

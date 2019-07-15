@@ -1,0 +1,29 @@
+.related-products-slick {
+  overflow: visible !important;
+  .slick-list {
+    overflow: visible !important;
+  }
+  .slick-slide {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+    &.slick-active {
+      opacity: 1;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    .slick-slide {
+      float: none;
+      height: auto;
+      > div,
+      div > .column,
+      .flag {
+        height: 100%;
+      }
+    }
+  }
+}
+.slick-overflow-limit {
+  overflow-x: hidden;
+}

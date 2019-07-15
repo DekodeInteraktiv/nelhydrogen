@@ -1,0 +1,93 @@
+.validation_error {
+  color: $alert-color;
+}
+
+.gform-confirmation-outer-wrap {
+  padding: 40px;
+  .gform_confirmation_message {
+    margin-bottom: 2rem;
+  }
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+}
+
+.gform_wrapper {
+  // .division-select {
+  // 	display: none;
+  // }
+
+  .validation_error {
+    padding: 40px 40px 0 40px;
+  }
+
+  .gfield_label {
+    margin-bottom: rem-calc(5);
+  }
+
+  .gform_validation_container {
+    display: none !important;
+  }
+
+  ul.gform_fields {
+    @include grid-row($behavior: nest);
+
+    li.gfield {
+      // hide custom bullets
+      &:before {
+        content: none;
+        display: none;
+      }
+
+      @include grid-column(12);
+      margin-bottom: 1rem;
+
+      input[type='text'],
+      input[type='email'],
+      textarea {
+        width: 100%;
+      }
+
+      .gfield_required {
+        background-color: $primary-color;
+        margin-left: 0.5rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        padding-top: 5px;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: text-top;
+        position: relative;
+        top: 0.3rem;
+      }
+
+      &.gfield_error {
+        .gfield_required {
+          background-color: $alert-color;
+        }
+        .gfield_description {
+          color: $alert-color;
+        }
+        input[type='text'],
+        input[type='email'],
+        textarea {
+          border-color: $alert-color;
+        }
+      }
+
+      .ginput_complex {
+        @include grid-row($behavior: nest);
+
+        .name_first,
+        .name_last {
+          @include grid-column(12);
+
+          @include breakpoint(medium) {
+            @include grid-column(6);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.broker-statistics {
+  h4 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.cision-info-type-filter {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
+  .filter {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+.cision-feed-table {
+  width: 100%;
+
+  tbody {
+    tr td {
+      vertical-align: top;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  .detail-link {
+    &:hover {
+      color: $black;
+    }
+  }
+
+  tbody,
+  thead {
+    td,
+    th {
+      padding-left: 20px;
+      padding-right: 20px;
+      &.col-first {
+        padding-left: 0;
+      }
+      &.col-last {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .col-0 {
+    width: 50%;
+  }
+  .col-1 {
+    width: 120px;
+  }
+  .col-2 {
+    // width: 16.666%;
+  }
+  .col-3 {
+    width: 120px;
+    // width: 16.666%;
+  }
+
+  tbody td.cision-feed-loader {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .inner {
+      display: block;
+      width: 100px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .anim {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 9999px;
+      background-color: $primary-color;
+      margin: 0 auto;
+      animation: pulsate 0.5s infinite;
+    }
+    .txt {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include breakpoint(small only) {
+  .cision-info-type-filter {
+    text-align: left;
+    margin-bottom: 1rem;
+    .filter {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .cision-feed-table {
+    border-top: 1px solid $light-gray;
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tbody,
+    tr,
+    td {
+      display: block !important;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $light-gray;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        td {
+          padding: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+table.company-info {
+  border-bottom: 0;
+  td {
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  tr {
+    color: $primary-color;
+  }
+}
+
+.cision-form-success {
+  padding: 30px;
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+.cision-form {
+  .validation_error {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.cision-filelist {
+  .file a {
+    &:hover {
+      color: $black;
+      &:before {
+        border-color: $black;
+      }
+    }
+  }
+}
+
+.share-links {
+  a {
+    margin-right: 1rem;
+  }
+
+  [class^='icon-'],
+  [class*=' icon-'] {
+    margin-right: 0.5rem;
+    font-size: 0.75;
+    vertical-align: middle;
+  }
+}

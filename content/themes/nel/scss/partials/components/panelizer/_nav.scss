@@ -1,0 +1,139 @@
+.plz-nav {
+  $w: rem-calc(28);
+
+  transform: translateZ(0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: $w;
+
+  @include breakpoint('medium') {
+    right: rem-calc(41);
+  }
+  @include breakpoint('large') {
+    right: rem-calc(60);
+  }
+
+  @include breakpoint(small only) {
+    display: none !important;
+  }
+
+  @include breakpoint('large') {
+    &.intro-state,
+    &.hover-state {
+      .inner {
+        .plz-nav__item {
+          .plz-nav__label {
+            opacity: 1;
+            visibility: visible;
+            transform: translate($w, 0);
+          }
+          button span {
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:hover {
+            .plz-nav__label {
+              // border-radius: 9999px;
+              // background-color: rgba($white,0.75);
+              transform: translate(0, 0);
+            }
+            button span {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    .plz-nav__item {
+      position: relative;
+      cursor: pointer;
+      height: $w;
+      .plz-nav__label {
+        color: $primary-color;
+        $l_height: $w;
+        position: absolute;
+        top: 0;
+        right: $w;
+        white-space: nowrap;
+        height: $l_height;
+        line-height: $l_height;
+        font-size: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s $google-ease-default;
+        padding-left: 8px;
+        padding-right: 8px;
+        z-index: 2;
+        @include font-uppercase;
+      }
+
+      button {
+        padding: ($w - $plz-dot-size)/2;
+        position: relative;
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+        transition: all 0.15s $google-ease-default;
+        span {
+          display: block;
+          width: $plz-dot-size;
+          height: $plz-dot-size;
+          background-color: $primary-color;
+          border-radius: 9999px;
+          overflow: hidden;
+          padding-top: $plz-dot-size;
+          transition: background-color 0.15s $google-ease-default;
+        }
+      }
+
+      &:hover {
+        .plz-nav__label {
+          opacity: 1;
+          visibility: visible;
+        }
+        button span {
+          border-color: $primary-color;
+        }
+      }
+
+      &.current {
+        .plz-nav__label {
+          opacity: 1;
+          visibility: visible;
+        }
+        button span {
+          border-color: $primary-color;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// make nav fit with current background
+body.data-bg-primary {
+  // body.data-bg-secondary
+  .plz-nav {
+    .inner {
+      .plz-nav__item {
+        .plz-nav__label {
+          color: $black;
+        }
+        button span {
+          background-color: $black;
+        }
+      }
+    }
+  }
+}

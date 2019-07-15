@@ -1,0 +1,42 @@
+{{#termNav.has_terms}}
+<div class="row">
+  <div class="columns">
+    {{> TermNav}}
+  </div>
+</div>
+{{/termNav.has_terms}}
+
+<div class="row align-center">
+  <div class="columns">
+    <ul class="PostLoop row">
+      {{#posts}}
+        <li class="PostLoop__item columns small-12 medium-6">
+          <article class="Cover">
+            <a href="{{permalink}}" class="Cover__image aspect small-aspect-widescreen">
+              {{#featured_image.atts}}
+              <div role="img" class="lazyload bg-image" {{{featured_image.atts}}}></div>
+              {{/featured_image.atts}}
+            </a>
+            <div class="Cover__meta">
+              {{#term_links}}<span class="Cover__terms">{{{term_links}}}</span>{{/term_links}}
+              <time class="Cover__published meta" datetime="{{post_date_gmt}}">{{date}}</time>
+            </div>
+            <a class="Cover__text" href="{{permalink}}">
+              <h3 class="Cover__title">{{{title}}}</h3>
+              {{#excerpt}}
+              <div class="Cover__excerpt">{{{excerpt}}}</div>
+              {{/excerpt}}
+              <span class="Cover__more">{{readmore}}</span>
+            </a>
+          </article>
+        </li>
+      {{/posts}}
+    </ul>
+  </div>
+</div>
+
+{{#pagination}}
+  <div class="Pagination row align-center">
+    <div class="columns">{{{pagination}}}</div>
+  </div>
+{{/pagination}}

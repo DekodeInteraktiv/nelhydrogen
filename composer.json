@@ -1,0 +1,30 @@
+{
+    "name": "dekode/nelhydrogen",
+   "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.dekodes.no/"
+		},
+		{
+			"type": "composer",
+			"url": "https://composer.dekodes.no/"
+		}
+    ],
+
+    "require": {
+        "johnpbloch/wordpress": "^5.2"
+    },
+        "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "content/themes/{$name}/": ["type:wordpress-theme" ]
+        }
+    }
+
+}

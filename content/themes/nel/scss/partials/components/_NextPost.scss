@@ -1,0 +1,24 @@
+.NextPost {
+  &__link {
+    color: $black;
+  }
+  &__label {
+    color: $medium-gray;
+  }
+  &__title {
+    margin-top: rem-calc(10);
+    margin-bottom: 0;
+  }
+  &__excerpt {
+    margin-top: rem-calc(15);
+  }
+  &__image {
+    margin-bottom: rem-calc(20);
+    @include breakpoint(large) {
+      margin-bottom: 0;
+    }
+  }
+  &:hover &__title {
+    color: $primary-color;
+  }
+}

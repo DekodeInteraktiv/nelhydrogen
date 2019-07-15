@@ -1,0 +1,9 @@
+.logo {
+	display: inline-block;
+	line-height: 1;
+	svg {
+		path {
+			fill: $black;
+		}
+	}
+}

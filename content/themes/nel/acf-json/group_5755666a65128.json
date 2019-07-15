@@ -1,0 +1,126 @@
+{
+  "key": "group_5755666a65128",
+  "title": "Header settings",
+  "fields": [
+    {
+      "key": "field_5b446205fc6b2",
+      "label": "Label",
+      "name": "label",
+      "type": "text",
+      "instructions": "Text line above main title",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5b4461e0a716e",
+      "label": "Subtitle",
+      "name": "subtitle",
+      "type": "text",
+      "instructions": "Text line below main title",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5755666d2967e",
+      "label": "Intro",
+      "name": "intro",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 4,
+      "new_lines": "wpautop",
+      "readonly": 0,
+      "disabled": 0
+    },
+    {
+      "key": "field_5b445e9f292d0",
+      "label": "Show featured image",
+      "name": "featured_image",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 0,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_57557633df2f9",
+      "label": "Hide header",
+      "name": "hide_header",
+      "type": "true_false",
+      "instructions": "If this is checked, all of the above including main title will be hidden.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "Hide header",
+      "default_value": 0,
+      "ui": 0,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      },
+      {
+        "param": "page_type",
+        "operator": "!=",
+        "value": "front_page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228413
+}

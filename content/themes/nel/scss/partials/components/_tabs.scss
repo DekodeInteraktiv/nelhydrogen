@@ -1,0 +1,119 @@
+.tab-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  &__content {
+    min-width: 100%;
+    display: inline-block;
+    vertical-align: middle; // remove empty space above
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+ul.tabs {
+  display: flex;
+  margin: 0 auto;
+  li.tabs-title {
+    float: none;
+    margin: 0 rem-calc(15) -1px rem-calc(15);
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      font-size: 1em;
+      border-bottom: 1px solid transparent;
+      background: transparent;
+      line-height: 1.25;
+      white-space: nowrap;
+      padding: 0 0 rem-calc(10) 0;
+      &:hover {
+        color: $black;
+        border-color: $dark-gray;
+      }
+      &:focus {
+        color: $black;
+        border-color: $dark-gray;
+        outline: none;
+      }
+    }
+    &.is-active {
+      a {
+        color: $black;
+        border-color: $black;
+        // &:hover {
+        // }
+      }
+    }
+    &.is-disabled {
+      pointer-events: none;
+      a {
+        color: $black;
+        &:after {
+          content: none !important;
+        }
+      }
+    }
+  }
+}
+
+ul.tabs.vertical {
+  @include breakpoint(medium) {
+    display: block;
+    text-align: left;
+    li.tabs-title {
+      border-top: 1px solid $light-gray;
+      margin: 0;
+      display: block;
+      a {
+        display: block;
+        padding: rem-calc(12 25 12 0);
+        position: relative;
+        border: 0;
+        white-space: normal;
+        &:after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg) translateY(-(rem-calc(7)));
+          border-top: 1px solid $light-gray;
+          border-right: 1px solid $light-gray;
+          position: absolute;
+          right: rem-calc(15);
+          top: 50%;
+        }
+        &:hover,
+        &:focus {
+          color: $black;
+          background: transparent;
+          &:after {
+            border-color: $dark-gray;
+          }
+        }
+      }
+      &.is-active {
+        a {
+          color: $black;
+          background: transparent;
+          &:after {
+            border-color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-panel {
+  padding-top: 0;
+  &__title {
+    margin-bottom: rem-calc(25);
+  }
+}
+
+[data-tabs-content='market-tabs'] {
+  .tabs-panel {
+    padding-top: rem-calc(25);
+    border-top: 1px solid $light-gray;
+  }
+}

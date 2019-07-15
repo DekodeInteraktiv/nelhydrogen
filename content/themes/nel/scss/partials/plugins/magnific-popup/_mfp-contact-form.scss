@@ -1,0 +1,30 @@
+.mfp-contact-form {
+  max-width: 600px;
+  background-color: $white;
+  margin: 0 auto;
+  position: relative;
+
+  .popup-header {
+    background-color: $light-gray;
+    padding: 40px;
+  }
+
+  .gform_body {
+    padding: rem-calc(20 20 0 20);
+  }
+
+  .gform_footer {
+    padding: rem-calc(20);
+  }
+
+  @include breakpoint(medium) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .gform_body {
+      padding: rem-calc(40 40 0 40);
+    }
+    .gform_footer {
+      padding: rem-calc(0 40 40 40);
+    }
+  }
+}

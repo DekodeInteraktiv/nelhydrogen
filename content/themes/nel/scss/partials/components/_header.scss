@@ -1,0 +1,49 @@
+#header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+@each $bp, $value in $site-padding {
+  @include breakpoint($bp) {
+    $gutter: map-get($grid-column-gutter, $bp);
+    .pad-top-equal,
+    .pad-top {
+      padding-top: rem-calc(($gutter / 2) + $value);
+    }
+    .pad-bottom {
+      padding-bottom: rem-calc(($gutter / 2) + $value);
+    }
+  }
+}
+
+@function pad-y-equal($bp) {
+  $gutter: map-get($grid-column-gutter, $bp);
+  $value: map-get($site-padding, $bp);
+  @return rem-calc(($gutter / 2) + $value);
+}
+
+@function pad-x-equal($bp) {
+  $gutter: map-get($grid-column-gutter, $bp);
+  $value: map-get($site-padding, $bp);
+  @return rem-calc(($gutter / 2) + $value);
+}
+
+body.bg-header-black {
+  .logo {
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+  @include breakpoint(large) {
+    .main-menu {
+      .current-menu-item > a {
+        color: $white;
+      }
+    }
+  }
+}

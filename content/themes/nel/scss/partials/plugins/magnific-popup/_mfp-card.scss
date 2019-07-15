@@ -1,0 +1,23 @@
+.mfp-card {
+  background-color: $white;
+  position: relative;
+  margin: 15px;
+  max-width: 640px - 30px;
+  margin: 15px;
+
+  &__inner {
+    padding: 40px;
+  }
+
+  &__title {
+    margin-bottom: rem-calc(40);
+  }
+
+  &__footer {
+    margin-top: rem-calc(40);
+  }
+
+  @include breakpoint(medium) {
+    margin: rem-calc(40) auto;
+  }
+}

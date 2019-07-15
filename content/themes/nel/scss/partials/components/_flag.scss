@@ -1,0 +1,23 @@
+.flag {
+  width: 100%;
+  &__title {
+    margin-bottom: rem-calc(12);
+  }
+  &__label {
+    margin-bottom: rem-calc(12);
+    &--empty {
+      visibility: hidden;
+    }
+  }
+  // &__link {
+  //   word-break: break-all;
+  // }
+  &__excerpt {
+    margin-bottom: rem-calc(12);
+    // @include font-size(small);
+  }
+  &__image-link {
+    padding: 2rem;
+    display: block;
+  }
+}

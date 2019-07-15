@@ -1,0 +1,37 @@
+# Copyright (C) 2015 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/category-custom-post-order\n"
+"POT-Creation-Date: 2015-01-04 20:22:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: category-post-sorter.php:71 category-post-sorter.php:121
+msgid "Order posts"
+msgstr ""
+
+#: category-post-sorter.php:83
+msgid "Order"
+msgstr ""
+
+#: category-post-sorter.php:132
+msgid "Category:"
+msgstr ""
+
+#: category-post-sorter.php:147
+msgid "No posts"
+msgstr ""
+
+#: category-post-sorter.php:152
+msgid "Reorder"
+msgstr ""
+
+#: category-post-sorter.php:154
+msgid "Remove order"
+msgstr ""

@@ -1,0 +1,37 @@
+@mixin container($gutters: $site-padding-inner) {
+  @each $bp, $value in $gutters {
+    $val: rem-calc($value);
+    @include breakpoint($bp) {
+      padding-left: $val;
+      padding-right: $val;
+    }
+  }
+}
+
+.container {
+  @include container;
+  &--wide {
+    @include container($site-padding);
+  }
+}
+
+.site-pad-bottom {
+  padding-bottom: 12%;
+}
+
+.latest-news {
+  position: relative;
+  .section__content {
+    position: relative;
+    z-index: 1;
+  }
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.15;
+  }
+}

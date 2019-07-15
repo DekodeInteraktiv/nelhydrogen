@@ -1,0 +1,19 @@
+<hr class="section-divider">
+<div class="NextPost section">
+  <div class="row align-center align-middle section__content">
+    {{#featured_image.atts}}
+    <div class="NextPost__image columns small-12 medium-8 large-6">
+      <div role="img" class="aspect small-aspect-widescreen lazyload bg-image" {{{featured_image.atts}}}></div>
+    </div>
+    {{/featured_image.atts}}
+    <div class="NextPost__text columns small-12 medium-8 large-6">
+      <a class="NextPost__link" href="{{permalink}}">
+        <span class="NextPost__label">{{label}}</span>
+        <h2 class="NextPost__title">{{{title}}}</h2>
+        {{#excerpt}}
+        <div class="NextPost__excerpt">{{{excerpt}}}</div>
+        {{/excerpt}}
+      </a>
+    </div>
+  </div>
+</div>

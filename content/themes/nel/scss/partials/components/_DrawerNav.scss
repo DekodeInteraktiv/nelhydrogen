@@ -1,0 +1,85 @@
+body {
+  position: relative;
+}
+
+.DrawerNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: none;
+  @include breakpoint(medium down) {
+    display: none !important;
+  }
+}
+
+.DrawerNav,
+.HomepageNav {
+  background-color: $black;
+  &__item {
+    color: $white;
+    background-color: $black;
+    display: block;
+    border-top: 1px solid mix($black, $true-black, 25%);
+    padding: rem-calc(36);
+    transition: background-color 0.25s $google-ease-default;
+    img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      will-change: transform;
+      transform: scale(0.95);
+      transition: transform 0.25s $google-ease-default;
+    }
+    &:hover {
+      color: $white;
+      transition-duration: 0s;
+      background-color: mix($black, $true-black, 25%);
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__title {
+    margin-top: rem-calc(24);
+  }
+
+  &__excerpt {
+    margin-top: rem-calc(6);
+    color: $white;
+  }
+
+  @include breakpoint(small only) {
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+    &__image {
+      width: 50%;
+    }
+    &__text {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__item {
+      border: 0;
+    }
+  }
+
+  &__submenu {
+    display: none;
+  }
+}
+
+#page {
+  // Make page overlap drawer
+  position: relative;
+  z-index: 2;
+  &.is-animating {
+    transition: transform 0.25s $google-ease-default;
+  }
+}

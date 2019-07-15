@@ -1,0 +1,113 @@
+.section-timeline {
+  background-color: $black;
+  color: $white;
+}
+
+.timeline {
+  text-align: left;
+
+  .row {
+    position: relative;
+  }
+
+  .desc {
+    > *:first-child {
+      margin-top: 0 !important;
+    }
+    > *:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: $primary-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    &:before {
+      content: ' ';
+      background-color: $primary-color;
+      position: absolute;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      margin-top: -5px;
+      margin-left: -5px;
+    }
+  }
+
+  @include breakpoint(small only) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .line {
+      left: 20px;
+      &:before {
+        top: 15px;
+        margin-top: 0;
+      }
+    }
+    .row {
+      padding-left: 60px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+  }
+
+  @include breakpoint(medium) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    .row {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .year {
+      @include grid-column(6);
+    }
+    .desc {
+      @include grid-column(6);
+    }
+    .odd {
+      .year {
+        text-align: right;
+      }
+    }
+    .even {
+      .year {
+        @include grid-col-pos(6);
+      }
+      .desc {
+        @include grid-col-pos(-6);
+        text-align: right;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .desc {
+      @include grid-column(4);
+    }
+    .odd {
+      .year {
+        padding-right: 50px;
+      }
+      .desc {
+        padding-left: 50px;
+      }
+    }
+    .even {
+      .year {
+        padding-left: 50px;
+      }
+      .desc {
+        @include grid-col-pos(-4);
+        padding-right: 50px;
+      }
+    }
+  }
+}

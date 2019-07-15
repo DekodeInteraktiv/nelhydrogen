@@ -1,0 +1,14 @@
+.list {
+  // &__item {
+  //   border-bottom: 1px solid $light-gray;
+  // }
+  &__link {
+    display: block;
+    padding: rem-calc(10 0);
+    border-bottom: 1px solid $light-gray;
+    transition: border-color 0.25s ease;
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+}

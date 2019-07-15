@@ -1,0 +1,34 @@
+@mixin font-size($key: 'body', $breakpoint: false) {
+  @if $breakpoint != false {
+    $value: map-get($header-styles, $key);
+  } @else {
+    @each $bp, $value in $header-styles {
+      $props: map-get($value, $key);
+      @include breakpoint($bp) {
+        @each $prop, $size in $props {
+          #{$prop}: rem-calc($size);
+        }
+      }
+    }
+  }
+}
+
+@mixin font-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  @include font-size(small);
+}
+
+@mixin button-padding {
+  padding: rem-calc(6 15 9 15);
+}
+
+@mixin label {
+  background: $light-gray;
+  border-radius: 99px;
+  display: inline-block;
+  line-height: 1;
+  @include font-uppercase;
+  @include button-padding;
+}

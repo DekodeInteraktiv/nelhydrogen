@@ -1,0 +1,13 @@
+<div class="button-nav">
+  <button class="button-nav__toggle">
+    <span class="button-nav__current">{{termNav.current_term}}</span>
+    <span class="button-nav__label">{{termNav.select}}</span>
+  </button>
+  <ul class="button-nav__list">
+  {{#termNav.items}}
+    <li class="button-nav__item {{#current}}button-nav__item--current{{/current}}">
+      <a class="button-nav__link" href="{{permalink}}">{{name}}</a>
+    </li>
+  {{/termNav.items}}
+  </ul>
+</div>

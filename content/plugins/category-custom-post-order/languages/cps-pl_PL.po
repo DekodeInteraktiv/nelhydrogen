@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic Forms\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/category-custom-post-order\n"
+"POT-Creation-Date: 2016-09-23 02:09+0200\n"
+"PO-Revision-Date: 2016-09-23 02:11+0200\n"
+"Last-Translator: Piotr Potrebka <piotr.potrebka@men.gov.pl>\n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;__;_e;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/admin_settings.php:21 ../includes/posts_order.php:105
+#: ../includes/posts_order.php:531
+msgid "Default"
+msgstr "Domyślnie"
+
+#: ../includes/admin_settings.php:22 ../includes/posts_order.php:107
+#: ../includes/posts_order.php:126
+msgid "Date"
+msgstr "Data"
+
+#: ../includes/admin_settings.php:23 ../includes/posts_order.php:108
+msgid "Modified"
+msgstr "Modyfikacja"
+
+#: ../includes/admin_settings.php:24 ../includes/posts_order.php:109
+msgid "Title"
+msgstr "Tytuł"
+
+#: ../includes/admin_settings.php:25 ../includes/posts_order.php:110
+msgid "ID"
+msgstr "ID"
+
+#: ../includes/admin_settings.php:26 ../includes/posts_order.php:111
+msgid "Author"
+msgstr "Autor"
+
+#: ../includes/admin_settings.php:27 ../includes/posts_order.php:112
+msgid "Slug"
+msgstr "Slug"
+
+#: ../includes/admin_settings.php:28
+msgid "Menu order"
+msgstr "Menu order"
+
+#: ../includes/admin_settings.php:34 ../includes/posts_order.php:120
+msgid "Descending"
+msgstr "Malejąco"
+
+#: ../includes/admin_settings.php:35 ../includes/posts_order.php:121
+msgid "Ascending"
+msgstr "Rosnąco"
+
+#: ../includes/admin_settings.php:52 ../includes/admin_settings.php:67
+msgid "Posts Order"
+msgstr "Kolejność postów"
+
+#: ../includes/admin_settings.php:53
+msgid "Posts order"
+msgstr "Kolejność postów"
+
+#: ../includes/admin_settings.php:93
+msgid "General settings"
+msgstr "Ustawienia główne"
+
+#: ../includes/admin_settings.php:100
+msgid "Homepage"
+msgstr "Strona Główna"
+
+#: ../includes/admin_settings.php:109
+msgid "Categories"
+msgstr "Kategorie"
+
+#: ../includes/admin_settings.php:118
+msgid "Supported taxonomies"
+msgstr "Obsługiwane taksonomii"
+
+#: ../includes/admin_settings.php:162
+msgid "Select global order for those section"
+msgstr "Wybierz globalnego porządku dla tych sekcji"
+
+#: ../includes/posts_order.php:65
+msgid "Your WordPress version is too old for using Posts Order."
+msgstr ""
+
+#: ../includes/posts_order.php:65
+msgid "Close"
+msgstr ""
+
+#: ../includes/posts_order.php:106
+msgid "Custom"
+msgstr "Własne"
+
+#: ../includes/posts_order.php:113
+msgid "Menu Order"
+msgstr "Menu Order"
+
+#: ../includes/posts_order.php:114
+msgid "Custom Field"
+msgstr "Własne pole"
+
+#: ../includes/posts_order.php:125
+msgid "Char"
+msgstr "Char"
+
+#: ../includes/posts_order.php:127
+msgid "Datetime"
+msgstr "Datetime"
+
+#: ../includes/posts_order.php:128
+msgid "Integer"
+msgstr "Integer"
+
+#: ../includes/posts_order.php:263 ../includes/posts_order.php:313
+#: ../includes/posts_order.php:526
+msgid "Order posts"
+msgstr "Sortuj wpisy"
+
+#: ../includes/posts_order.php:317
+msgid "Category:"
+msgstr "Kategoria:"
+
+#: ../includes/posts_order.php:330
+msgid "No posts"
+msgstr "Brak wpisów"
+
+#: ../includes/posts_order.php:334
+msgid "Save"
+msgstr "Zapisz"
+
+#: ../includes/posts_order.php:336
+msgid "Reset order"
+msgstr "Resetuj "
+
+#: ../includes/posts_order.php:338
+msgid "Reverse"
+msgstr "Odwróć"
+
+#: ../includes/posts_order.php:377 ../includes/posts_order.php:429
+msgid "Order by"
+msgstr "Sortuj wg"
+
+#: ../includes/posts_order.php:395 ../includes/posts_order.php:448
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Wybierz &mdash;"
+
+#: ../includes/posts_order.php:404 ../includes/posts_order.php:457
+msgid "Type"
+msgstr "Typ"
+
+#: ../includes/posts_order.php:411 ../includes/posts_order.php:465
+msgid "Select order field"
+msgstr "Wybierz sposób sortowania"
+
+#: ../includes/posts_order.php:505
+msgid "Order"
+msgstr "Sortowanie"
+
+#~ msgid "Reorder"
+#~ msgstr "Posortuj"
+
+#~ msgid "Remove order"
+#~ msgstr "Usuń sortowanie"
+
+#~ msgid "None"
+#~ msgstr "Brak"
+
+#~ msgid "Descending "
+#~ msgstr "Malejąco [Z-A]"
+
+#~ msgid "Ascending "
+#~ msgstr "Rosnąco [A-Z]"

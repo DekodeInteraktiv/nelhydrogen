@@ -1,0 +1,16 @@
+.download-link {
+  &__helper {
+    color: $medium-gray;
+    margin-left: 0.25em;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-5px);
+    transition: all 0.25s ease;
+    display: inline-block;
+  }
+  &:hover &__helper {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

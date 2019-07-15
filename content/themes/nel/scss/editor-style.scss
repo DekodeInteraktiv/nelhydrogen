@@ -1,0 +1,74 @@
+@import 'settings';
+
+$basepath: '';
+@import 'partials/base/fonts';
+
+body {
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    color: $body-font-color;
+    font-size: 16px;
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4 {
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lead {
+    font-size: 19px;
+}
+
+.btn {
+    height: 50px;
+    border-radius: 9999px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    line-height: 50px;
+
+    &.btn-a {
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    &.btn-b {
+        background-color: $white;
+        color: $primary-color;
+    }
+
+    &.btn-c {
+        background-color: $black;
+        color: $white;
+    }
+
+    &.btn-small {
+        height: 30px;
+        line-height: 28px;
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+.meta {
+    color: $medium-gray;
+
+    a {
+        color: $medium-gray;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

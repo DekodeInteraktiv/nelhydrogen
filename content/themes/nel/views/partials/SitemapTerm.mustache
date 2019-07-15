@@ -1,0 +1,10 @@
+<li class="Sitemap__item">
+  <a class="Sitemap__link" href="{{permalink}}">{{name}}</a>
+  {{#has_children}}
+    <ul class="Sitemap__children">
+    {{#children}}
+      {{> SitemapTerm}}
+    {{/children}}
+    </ul>
+  {{/has_children}}
+</li>

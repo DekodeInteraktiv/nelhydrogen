@@ -1,0 +1,37 @@
+.panelizer {
+  overflow: hidden;
+  width: 100%;
+
+  .plz-panels,
+  .plz-nav,
+  .plz-progress {
+    will-change: transform;
+    perspective: 1000;
+  }
+
+  .plz-nav {
+    transform: translateX($plz-dot-size + rem-calc(20));
+    transition: transform 0.25s $google-ease-out;
+    z-index: 2;
+  }
+  .plz-progress {
+    transform: translateX(-(rem-calc(20)));
+    transition: transform 0.25s $google-ease-out;
+  }
+
+  .panel {
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+  }
+
+  &.plz-init {
+    .panel {
+      opacity: 1;
+    }
+
+    .plz-nav,
+    .plz-progress {
+      transform: translateX(0);
+    }
+  }
+}

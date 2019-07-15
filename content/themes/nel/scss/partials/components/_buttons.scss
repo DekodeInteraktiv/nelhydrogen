@@ -1,0 +1,215 @@
+input[type='submit'] {
+  border-radius: 9999px;
+  background-color: $primary-color;
+  padding: rem-calc(12 24 14 24);
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: $black;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-weight: $global-weight-normal;
+}
+
+/*
+BASE STYLE
+*/
+
+.btn,
+a.btn {
+  border-radius: 9999px;
+  display: inline-block;
+  // height: 50px;
+  padding: rem-calc(12 24 14 24);
+  line-height: 1.25;
+  text-align: center;
+  // line-height: 47px;
+  transition-property: transform, color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: $google-ease-default;
+  text-decoration: none !important;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+/*
+VARIATIONS
+*/
+
+.btn-a,
+a.btn-a {
+  background-color: $primary-color;
+  color: $white;
+  &:hover {
+    background-color: tint($primary-color, 90%);
+    color: $white;
+  }
+}
+
+.btn-b,
+a.btn-b {
+  background-color: $white;
+  color: $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.btn-c,
+a.btn-c {
+  background-color: $black;
+  color: $white;
+  &:hover {
+    background-color: tint($black, 95%);
+    color: $white;
+  }
+}
+
+.btn-d,
+a.btn-d {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: transparent;
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+/*
+SPECIAL BUTTONS
+*/
+
+.btn-circle,
+a.btn-circle {
+  width: rem-calc(50);
+  height: rem-calc(50);
+  line-height: rem-calc(48);
+  padding: 0;
+  text-align: center;
+}
+
+.btn-small,
+a.btn-small {
+  // height: 30px;
+  // line-height: 28px;
+  // padding: 0 15px;
+  @include button-padding;
+  @include font-uppercase;
+}
+
+.btn-play {
+  &:before {
+    content: '';
+    display: inline-block;
+    border: 8px solid transparent;
+    border-left-color: $white;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    width: 0;
+    height: 0;
+  }
+}
+
+/*
+COLOR BACKGROUND VARIATIONS
+*/
+
+.bg-primary {
+  .btn-a,
+  a.btn-a {
+    border: 1px solid $white;
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+}
+
+.bg-secondary {
+  .btn-c,
+  a.btn-c {
+    border: 1px solid $white;
+    &:hover {
+      background-color: $white;
+      color: $secondary-color;
+    }
+  }
+}
+
+.bg-default {
+  .btn-b,
+  a.btn-b {
+    border: 1px solid $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+}
+
+/*
+Special buttons
+*/
+.btn-top {
+  position: fixed;
+  z-index: 5;
+
+  display: block;
+
+  $size: 42px;
+  width: $size;
+  height: $size;
+
+  text-align: center;
+  line-height: $size;
+  border-radius: 9999px;
+
+  background-color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: $true-black;
+    color: $primary-color-tint;
+  }
+
+  // toggle visibility
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s $google-ease-default !important;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  top: rem-calc(75);
+  right: 1.25rem;
+
+  @include breakpoint(medium) {
+    right: rem-calc(35);
+    top: rem-calc(90);
+  }
+
+  @include breakpoint(large) {
+    right: rem-calc(48);
+    bottom: rem-calc(80);
+    top: auto;
+  }
+}
+
+body.mm-open {
+  .btn-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

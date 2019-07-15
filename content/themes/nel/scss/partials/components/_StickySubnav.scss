@@ -1,0 +1,92 @@
+.StickySubnav {
+  border-bottom: 1px solid transparent;
+  background: $white;
+  transition: border-color 1s ease;
+
+  &__item {
+    display: block;
+    &--button {
+      padding: rem-calc(12 0);
+      border: 0;
+    }
+  }
+  &__label {
+    display: block;
+    padding: rem-calc(0 0 12 0);
+  }
+  &__top {
+    margin-right: rem-calc(24);
+    padding-right: rem-calc(12);
+    border-right: 1px solid $light-gray;
+    display: none;
+  }
+
+  &__top-button {
+    font-size: rem-calc(14);
+    display: block;
+    height: rem-calc(33);
+    line-height: rem-calc(36);
+    padding-right: rem-calc(12);
+  }
+
+  &__link {
+    display: block;
+    padding: rem-calc(12 0);
+  }
+
+  &.is-stuck {
+    border-color: $light-gray;
+  }
+
+  &.is-stuck &__list {
+    border-color: transparent;
+  }
+
+  &.is-stuck &__top {
+    display: inline-block;
+  }
+
+  @include breakpoint(small only) {
+    &__top {
+      display: none;
+    }
+    &__item {
+      border-top: 1px solid $light-gray;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__list {
+      border-top: 1px solid $light-gray;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &__item {
+      margin: -1px rem-calc(10) 0 rem-calc(10);
+      &--button {
+        margin-left: auto;
+      }
+    }
+    &__label {
+      padding: rem-calc(24 24 24 0);
+    }
+    &__link {
+      vertical-align: middle;
+      padding: rem-calc(24 0);
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      &:focus {
+        outline: none;
+        border-color: $medium-gray;
+      }
+      &:hover {
+        border-color: $medium-gray;
+      }
+      &.is-active {
+        border-color: $primary-color;
+        color: $black;
+      }
+    }
+  }
+}

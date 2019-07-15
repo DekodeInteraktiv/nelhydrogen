@@ -1,0 +1,102 @@
+/* iOS Theme
+*/
+.switch-ios {
+  $selected: $primary-color;
+
+  // &.switch-light {
+  //   span span {
+  //     color: darken(#d8d9db, 30%);
+  //   }
+
+  //   a {
+  //     left: 0;
+  //     top: 0;
+  //     width: rem-calc(32);
+  //     height: rem-calc(32);
+  //     background-color: #fff;
+  //     border-radius: 100%;
+  //     border: rem-calc(4) solid #d8d9db;
+
+  //     transition: all 0.2s ease-out;
+  //   }
+
+  //   > span {
+  //     display: block;
+  //     width: 100%;
+  //     height: rem-calc(32);
+  //     background-color: #d8d9db;
+  //     border-radius: 9999px;
+
+  //     transition: all 0.4s ease-out;
+  //   }
+
+  //   > span span {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     opacity: 0;
+
+  //     line-height: rem-calc(30);
+  //     vertical-align: middle;
+
+  //     transition: all 0.2s ease-out;
+
+  //     &:first-of-type {
+  //       opacity: 1;
+  //       padding-left: rem-calc(30);
+  //     }
+
+  //     &:last-of-type {
+  //       padding-right: rem-calc(30);
+  //     }
+  //   }
+
+  //   input:checked {
+  //     ~ span a {
+  //       left: 100%;
+  //       border-color: $selected;
+  //       margin-left: rem-calc(-32);
+  //     }
+
+  //     ~ span {
+  //       border-color: $selected;
+  //       box-shadow: inset 0 0 0 30px $selected;
+  //     }
+
+  //     ~ span span {
+  //       &:first-of-type {
+  //         opacity: 0;
+  //       }
+
+  //       &:last-of-type {
+  //         opacity: 1;
+  //         color: #fff;
+  //       }
+  //     }
+  //   }
+  // }
+
+  &.switch-toggle {
+    background-color: $light-gray;
+    border-radius: 999px;
+
+    a {
+      background-color: $selected;
+      border: rem-calc(2) solid $light-gray;
+      border-radius: 999px;
+      transition: all 0.25s $google-ease-default;
+    }
+
+    label {
+      height: 2.4em;
+      color: $dark-gray;
+      line-height: 2.3em;
+      vertical-align: middle;
+    }
+  }
+
+  input:checked + label {
+    color: $white;
+  }
+}

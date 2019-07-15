@@ -1,0 +1,51 @@
+{
+  "key": "group_5b98b2d88f0a4",
+  "title": "Publish",
+  "fields": [
+    {
+      "key": "field_5b98b34ffc6bc",
+      "label": "Visibility",
+      "name": "visibility",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "public": "Public",
+        "private": "Private"
+      },
+      "default_value": [
+        "public"
+      ],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 0,
+      "return_format": "value",
+      "ajax": 0,
+      "placeholder": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "Publish box for Taxonomies",
+  "modified": 1536735469
+}

@@ -1,0 +1,16 @@
+{{#section_divider}}
+<hr class="section-divider">
+{{/section_divider}}
+<div data-magellan-target="{{slug}}" id="{{slug}}"></div>
+<section id="section-{{slug}}" data-nav-title="{{title}}" class="section {{section_classes}}">
+  {{#bgset}}
+    <div class="section__bg-image lazyload" {{{bgset}}}></div>
+  {{/bgset}}
+  <div class="{{aspect_inner}}">
+    <div class="row section__content align-center {{row_classes}}">
+      <div class="{{column_classes}}">
+        <div class="wysiwyg">{{{content}}}</div>
+      </div>
+    </div>
+  </div>
+</section>

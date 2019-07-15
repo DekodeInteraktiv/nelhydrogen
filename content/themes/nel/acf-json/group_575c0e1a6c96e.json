@@ -1,0 +1,54 @@
+{
+  "key": "group_575c0e1a6c96e",
+  "title": "Product Category — Contact",
+  "fields": [
+    {
+      "key": "field_575c0e1f575ef",
+      "label": "Select division",
+      "name": "division_select",
+      "type": "select",
+      "instructions": "Connects the embedded contact form with the correct division email.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "": "-- Select division --",
+        "corporate": "Corporate",
+        "hydrogen-fueling": "Nel Hydrogen Fueling and Solutions",
+        "electrolyser": "Nel Hydrogen Electrolyser",
+        "marketdevelopment": "Market Development \/ IR"
+      },
+      "default_value": [],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": "",
+      "disabled": 0,
+      "readonly": 0,
+      "return_format": "value"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "product_category"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228381
+}

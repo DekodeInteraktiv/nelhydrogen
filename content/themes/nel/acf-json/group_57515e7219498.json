@@ -1,0 +1,46 @@
+{
+  "key": "group_57515e7219498",
+  "title": "Featured Article",
+  "fields": [
+    {
+      "key": "field_57515e7c60bc4",
+      "label": "Featured Article",
+      "name": "featured_article",
+      "type": "post_object",
+      "instructions": "If no article is selected, no news flash will appear on the front page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": [
+        "post"
+      ],
+      "taxonomy": [],
+      "allow_null": 1,
+      "multiple": 0,
+      "return_format": "object",
+      "ui": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_type",
+        "operator": "==",
+        "value": "front_page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1531228423
+}

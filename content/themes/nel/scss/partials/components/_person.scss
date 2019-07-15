@@ -1,0 +1,88 @@
+.person {
+  .img-wrap {
+    position: relative;
+    display: block;
+  }
+
+  .readmore {
+    background: url('../images/icons/plus.svg') center center no-repeat;
+
+    $sz: 30px;
+    width: $sz;
+    height: $sz;
+    text-align: center;
+    line-height: $sz;
+    font-size: 9px;
+    position: absolute;
+    bottom: -($sz/2);
+    left: 50%;
+    margin-left: -($sz/2);
+
+    background-color: $primary-color;
+    color: $white;
+
+    border-radius: 9999px;
+    transition: transform 0.15s $google-ease-default;
+    transform-origin: center center;
+    transform: translateZ(0) scale(0);
+  }
+
+  a {
+    color: $black;
+    &:hover {
+      color: $primary-color;
+      .readmore {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.PersonCard {
+  &__link {
+    display: block;
+    color: $black;
+    padding-top: rem-calc(24);
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &__image {
+    margin-bottom: rem-calc(24);
+  }
+  &__title {
+    color: $dark-gray;
+  }
+  @include breakpoint(small only) {
+    &__link {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &__image {
+      width: 50%;
+      padding-left: rem-calc(12);
+    }
+    &__text {
+      width: 50%;
+      padding-right: rem-calc(12);
+    }
+  }
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+}
+
+.board-list {
+  margin-top: 3rem;
+  &--centered {
+    justify-content: space-around;
+  }
+  &__item {
+    @include breakpoint(small only) {
+      border-bottom: 1px solid $light-gray;
+    }
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(24);
+    }
+  }
+}

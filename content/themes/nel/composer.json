@@ -1,0 +1,12 @@
+{
+  "name": "heydays/nel",
+  "require": {
+    "mustache/mustache": "2.12"
+  },
+  "authors": [
+    {
+      "name": "Heydays AS",
+      "email": "studio@heydays.no"
+    }
+  ]
+}

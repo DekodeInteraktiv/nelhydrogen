@@ -1,0 +1,398 @@
+#scrollmagic {
+  // init
+  transition: opacity 1.5s $google-ease-default;
+  opacity: 1;
+
+  &.loading {
+    opacity: 0.001;
+  }
+
+  position: relative;
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .section {
+    position: relative;
+  }
+
+  .text-flicker {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    color: $white;
+    z-index: 3;
+    width: 100%;
+    height: 50%;
+
+    .text-panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 150px; // make space for center artwork
+      padding-bottom: 10px;
+      text-align: center;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      &.before {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      &.after {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    }
+  }
+}
+
+button.next-sm-slide {
+  $size: 40px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -($size/2);
+  border: 1px solid $white;
+  color: $white;
+  z-index: 9;
+  width: $size;
+  height: $size;
+  line-height: $size - 6px;
+  text-align: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  padding: 0;
+}
+
+#svg-scene,
+#space,
+#illustrations {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.trigger-zone {
+  width: 20px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #000, red);
+  .label {
+    display: block;
+    color: $white;
+    white-space: nowrap;
+    transform: rotate(90deg);
+  }
+}
+
+#illustrations {
+  $top-pos: -250px;
+  $counter-reveal-duration: 0.75s;
+
+  .earth-scene {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: $top-pos;
+    margin-left: -150px;
+
+    .earth {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+
+      img.globe {
+        position: absolute;
+        z-index: 2;
+      }
+
+      img.filter {
+        position: absolute;
+        z-index: 3;
+      }
+
+      img.renewable,
+      img.fossil {
+        position: absolute;
+        z-index: 3;
+      }
+
+      .counter-year,
+      .counter-co2 {
+        position: absolute;
+      }
+
+      .counter-year {
+        text-align: center;
+        padding-top: 1rem;
+        transform: translateY(-100px);
+        z-index: 0;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        transition: opacity $counter-reveal-duration $google-ease-default,
+          transform $counter-reveal-duration $google-ease-default;
+        opacity: 0;
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .counter-co2 {
+        top: 50%;
+        left: 100%;
+        margin-left: 1rem;
+        margin-top: -1.5rem;
+        transition: opacity $counter-reveal-duration $google-ease-default,
+          transform $counter-reveal-duration $google-ease-default;
+        transform: translateX(-150px);
+        opacity: 0;
+        width: 200px;
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @include breakpoint(small only) {
+        .counter-year,
+        .counter-co2 {
+          transform: translateX(0) translateY(0);
+          left: 50%;
+          width: 200px;
+          margin-left: -100px;
+          z-index: 3;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .water-cycle-wrap {
+    // width: 400px;
+    // height: 300px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // margin-top: $top-pos;
+    // margin-left: -200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin-top: -100px;
+    img {
+      width: 100%;
+      max-width: 400px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .energy-density {
+    // width: 600px;
+    // height: 240px;
+    // margin-top: $top-pos + 60px;
+    // margin-left: -300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin-top: -60px;
+    img {
+      width: 100%;
+      max-width: 600px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .sun-scene {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: $top-pos;
+    margin-left: -150px;
+
+    .sun {
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: $primary-color;
+      top: 0;
+      left: 0;
+
+      background-color: $white;
+      box-shadow: 0 0 30px rgba($white, 1);
+    }
+
+    .sun-label {
+      position: absolute;
+      bottom: 0;
+      right: -200px;
+      width: 180px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      &.visible {
+        opacity: 1;
+      }
+      @include breakpoint(small only) {
+        color: $primary-color;
+        text-align: center;
+        top: 50%;
+        right: 0;
+        left: 50%;
+        margin-left: -90px;
+        margin-top: -1rem;
+      }
+    }
+  }
+}
+
+#space {
+  transition: opacity 1s ease;
+  width: 100%;
+  height: 100%;
+  canvas {
+    width: 100%;
+  }
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.sm-scene {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  .inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    //background-color: #CCC;
+  }
+}
+
+.sm-panels-after {
+  position: relative;
+  z-index: 10;
+}
+
+.sm-panels {
+  position: relative;
+  z-index: 4;
+
+  .underline {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  .img-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .sm-panel {
+    .content-wrap {
+      padding-top: 10%;
+      padding-bottom: 10%;
+      width: 100%;
+    }
+  }
+}
+
+.fit-to-screen {
+  height: 100vh;
+}
+
+.sm-panel-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+$bp-height-medium: '(max-height: 800px)';
+@media screen and #{$bp-height-medium} and #{breakpoint(medium)} {
+  #scrollmagic {
+    .text-flicker {
+      .columns {
+        @include grid-column(12);
+        @include grid-column-position(center);
+        p {
+          margin-bottom: 0.5rem;
+          font-size: 14px;
+          &.lead {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+$bp-height-large: '(max-height: 700px)';
+@media screen and #{$bp-height-large} and #{breakpoint(large)} {
+  #scrollmagic {
+    .text-flicker {
+      .columns {
+        @include grid-column(8);
+        @include grid-column-position(center);
+      }
+    }
+  }
+}
+
+@include breakpoint(small only) {
+  #scrollmagic {
+    .text-flicker {
+      position: fixed;
+      left: 0;
+      top: auto;
+      bottom: 0;
+      height: auto;
+      background-color: red;
+
+      .text-panel {
+        top: auto;
+        bottom: 0;
+        font-size: 14px;
+        p.lead {
+          font-size: 14px;
+        }
+      }
+
+      // .text-panel {
+      // 	position: absolute;
+      // 	top: 0;
+      // 	left: 0;
+      // 	width: 100%;
+      // 	padding-top: 150px; // make space for center artwork
+      // 	padding-bottom: 10px;
+      // 	text-align: center;
+      // 	transition: opacity 0.35s ease, transform 0.35s ease;
+      // 	&.before {
+      // 		opacity: 0;
+      // 		transform: translateY(100px);
+      // 	}
+      // 	&.after {
+      // 		opacity: 0;
+      // 		transform: translateY(-100px);
+      // 	}
+      // }
+    }
+  }
+}

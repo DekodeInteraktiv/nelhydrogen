@@ -1,0 +1,20 @@
+<li class="Sitemap__item">
+  <div>
+    <a class="Sitemap__link" href="{{permalink}}">{{post_title}}</a>
+    {{#special_label}}<small>{{special_label}}</small>{{/special_label}}
+    {{#has_translations}}
+      <small class="Sitemap__langs">
+      {{#translations}}
+        <a title="{{title}}" class="Sitemap__lang" href="{{permalink}}">({{lang}})</a>
+      {{/translations}}
+      </small>
+    {{/has_translations}}
+  </div>
+  {{#has_children}}
+    <ul class="Sitemap__children">
+    {{#children}}
+      {{> SitemapPost}}
+    {{/children}}
+    </ul>
+  {{/has_children}}
+</li>

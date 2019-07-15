@@ -1,0 +1,18 @@
+.gform_heading {
+  padding: rem-calc(20);
+  display: flex;
+  border-bottom: 1px solid $light-gray;
+  &__text,
+  &__image {
+    width: 100%;
+  }
+  &__text {
+    padding-right: rem-calc(20);
+  }
+  &__image {
+    max-width: 30%;
+  }
+  @include breakpoint(medium) {
+    padding: rem-calc(40);
+  }
+}

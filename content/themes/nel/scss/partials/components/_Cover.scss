@@ -1,0 +1,103 @@
+.Cover {
+  color: $black;
+  display: block;
+
+  &__text {
+    color: $black;
+  }
+
+  &__image {
+    transition: transform 1s ease;
+    margin-bottom: rem-calc(15);
+    background: $light-gray;
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+    }
+  }
+
+  &__excerpt {
+    display: inline;
+    p {
+      margin: 0;
+      display: inline;
+    }
+  }
+
+  &__more {
+    color: $primary-color;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s ease;
+    white-space: nowrap;
+  }
+
+  &:hover &__more {
+    border-color: $primary-color;
+  }
+
+  &__terms {
+    margin-right: rem-calc(10);
+  }
+
+  &__title {
+    margin-top: rem-calc(10);
+    margin-bottom: rem-calc(15);
+  }
+
+  &__documents {
+    margin-top: rem-calc(15);
+  }
+
+  &:hover &__image > div {
+    transform: scale(1.05);
+  }
+}
+
+.List {
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &--horizontal &__item {
+    margin-right: rem-calc(15);
+    margin-bottom: rem-calc(5);
+    @include breakpoint(medium) {
+      white-space: nowrap;
+    }
+  }
+  &--small {
+    @include font-size(small);
+  }
+}
+
+.PostLoop {
+  &__item {
+    margin-top: rem-calc(35);
+    @include breakpoint(medium) {
+      margin-top: rem-calc(70);
+    }
+  }
+}
+
+.Pagination {
+  margin-top: rem-calc(90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .page-numbers {
+    display: inline-block;
+    padding: rem-calc(5 10 8 10);
+    border: 1px solid $light-gray;
+    line-height: 1;
+    border-radius: 99px;
+    margin: rem-calc(5);
+    @include font-size(small);
+    &.current {
+      background: $light-gray;
+    }
+  }
+}

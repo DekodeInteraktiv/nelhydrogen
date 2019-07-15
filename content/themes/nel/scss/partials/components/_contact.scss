@@ -1,0 +1,18 @@
+.division-list {
+	margin-bottom: 6rem;
+	.division {
+		border-top: 1px solid $light-gray;
+		padding-top: 2rem;
+		margin-bottom: 2rem;
+		.title {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.form-column {
+	.gform_wrapper {
+		border-top: 1px solid $light-gray;
+		padding-top: 2rem;
+	}
+}

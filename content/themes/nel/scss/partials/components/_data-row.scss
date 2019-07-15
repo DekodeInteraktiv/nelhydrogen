@@ -1,0 +1,18 @@
+.data-row-data {
+  margin-top: 2rem;
+  color: $primary-color;
+  .title {
+    @extend .text-huge;
+  }
+  @include breakpoint(medium) {
+    .title,
+    .description {
+      display: block;
+    }
+  }
+  @include breakpoint(small only) {
+    .title {
+      margin-right: 1rem;
+    }
+  }
+}

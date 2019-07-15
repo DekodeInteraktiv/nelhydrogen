@@ -1,0 +1,40 @@
+.shareholders {
+  text-align: left;
+  margin-bottom: rem-calc(36);
+  @include breakpoint(medium) {
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);
+  }
+}
+
+.shareholder-table {
+  width: 100%;
+  border-bottom: 0;
+  thead {
+    th {
+      color: $white;
+    }
+  }
+  tbody {
+    td {
+      vertical-align: top;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      color: $medium-gray;
+      padding-right: rem-calc(12);
+      &:last-child {
+        padding-right: 0;
+        width: 50%;
+      }
+    }
+    tr:hover td,
+    tr.hovering td {
+      color: $white;
+      background-color: mix($black, $true-black, 25%);
+    }
+  }
+  thead tr td,
+  tbody tr td {
+    border-bottom: 1px solid mix($black, $true-black, 25%);
+  }
+}

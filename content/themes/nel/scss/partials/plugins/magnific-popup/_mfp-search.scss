@@ -1,0 +1,7 @@
+.mfp-search.mfp-bg.mfp-fade.mfp-ready {
+  background-color: $true-black;
+  opacity: 0.98;
+  &.mfp-removing {
+    opacity: 0;
+  }
+}

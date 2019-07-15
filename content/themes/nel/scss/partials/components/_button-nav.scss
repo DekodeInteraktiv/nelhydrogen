@@ -1,0 +1,93 @@
+.button-nav {
+  &__list {
+    display: none;
+  }
+
+  &__item {
+    border-top: 1px solid $light-gray;
+  }
+
+  &__current {
+    color: $primary-color;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    padding-right: rem-calc(30);
+    &:after {
+      content: '';
+      display: block;
+      border-right: 1px solid $medium-gray;
+      border-bottom: 1px solid $medium-gray;
+      width: rem-calc(10);
+      height: rem-calc(10);
+      transform: rotate(45deg);
+      margin-top: -(rem-calc(7));
+      transition: all 0.15s ease;
+      position: absolute;
+      top: 50%;
+      right: rem-calc(5);
+      // transform-origin: 75% center;
+    }
+  }
+
+  &__toggle {
+    border-top: 1px solid $light-gray;
+    display: flex;
+    padding: rem-calc(12 0);
+    width: 100%;
+    text-align: left;
+    line-height: inherit;
+    font-size: inherit;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: block;
+    padding: rem-calc(12 0);
+  }
+
+  &.is-open &__list {
+    display: block;
+  }
+
+  @include breakpoint(medium) {
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: rem-calc(40);
+    }
+    &__item {
+      margin: 0 rem-calc(5);
+      position: relative;
+      border: 0;
+    }
+    &__link {
+      // border-top: 2px solid transparent;
+      // padding: rem-calc(24 0);
+      @include button-padding;
+      border-radius: 99px;
+      line-height: 1;
+      border: 1px solid transparent;
+      transition: background-color 0.25s ease;
+      &:hover {
+        color: $black;
+      }
+      &:focus {
+        outline: none;
+        border-color: $light-gray;
+      }
+    }
+
+    &__item--current &__link {
+      color: $black;
+      background-color: $light-gray;
+    }
+  }
+}

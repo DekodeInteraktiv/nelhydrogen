@@ -1,0 +1,24 @@
+.Sitemap {
+  &__header {
+    margin-bottom: rem-calc(10);
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: rem-calc(10);
+  }
+  &__group {
+    margin-bottom: rem-calc(30);
+  }
+  &__card {
+    padding: rem-calc(20);
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+  }
+  &__children {
+    padding-left: rem-calc(20);
+  }
+  &__item {
+    margin-bottom: rem-calc(5);
+  }
+  &__langs {
+    text-transform: uppercase;
+  }
+}

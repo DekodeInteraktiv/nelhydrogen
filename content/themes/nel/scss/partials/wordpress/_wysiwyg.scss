@@ -1,0 +1,153 @@
+.wysiwyg {
+  // color: mix($black, $white, 95%);
+
+  // h1,
+  // h2,
+  // h3,
+  // h4 {
+  //   color: $black;
+  // }
+
+  h2 {
+    margin-top: rem-calc(50);
+    margin-bottom: rem-calc(25);
+  }
+
+  h3 {
+    margin-top: rem-calc(50);
+    margin-bottom: rem-calc(25);
+  }
+
+  h4 {
+    margin-bottom: rem-calc(25);
+    margin-top: rem-calc(25);
+  }
+
+  ul {
+    // color: $primary-color;
+    margin-bottom: rem-calc(25);
+    margin-top: rem-calc(25);
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: rem-calc(20);
+      &:before {
+        margin-left: -(rem-calc(20));
+        content: ' ';
+        border-radius: 9999px;
+        background-color: $primary-color;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        top: 0.55rem;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+
+  ul.tabs,
+  .gform_wrapper ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    li {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .gform_wrapper {
+    border: 1px solid $light-gray;
+    box-shadow: 0 0 10px rgba($medium-gray, 0.25);
+    padding: rem-calc(30);
+    background: $white;
+    .gform_title {
+      margin-top: 0;
+    }
+    .gform_hidden {
+      position: absolute;
+      left: -999em;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    ul.gfield_checkbox {
+      margin: 0;
+    }
+  }
+
+  figure {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .embed-wrap {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  /*
+	Gallery grid layouts
+	*/
+  .gallery {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include grid-row($behavior: nest);
+    .gallery-item {
+      @include grid-column;
+      @include grid-column-end; // disable last item float right
+    }
+    @include breakpoint(medium) {
+      @include grid-layout(2, '.gallery-item');
+    }
+  }
+
+  .gallery-columns-3 {
+    @include breakpoint(large) {
+      @include grid-layout(3, '.gallery-item');
+    }
+  }
+
+  .gallery-columns-4 {
+    @include grid-layout(2, '.gallery-item');
+    @include breakpoint(large) {
+      @include grid-layout(4, '.gallery-item');
+    }
+  }
+
+  .gallery-columns-5 {
+    @include grid-layout(2, '.gallery-item');
+    @include breakpoint(large) {
+      @include grid-layout(5, '.gallery-item');
+    }
+  }
+
+  .gallery-columns-6 {
+    @include grid-layout(2, '.gallery-item');
+    @include breakpoint(large) {
+      @include grid-layout(6, '.gallery-item');
+    }
+  }
+
+  .wp-caption-text {
+    padding-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .wp-caption {
+    max-width: 100%;
+  }
+
+  // img {
+  // 	max-width: 100%;
+  // 	height: auto;
+  // }
+
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+}

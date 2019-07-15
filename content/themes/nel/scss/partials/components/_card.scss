@@ -1,0 +1,11 @@
+.card {
+  @include breakpoint(large) {
+    &--horizontal {
+      display: flex;
+      align-items: center;
+    }
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}

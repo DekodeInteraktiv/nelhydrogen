@@ -1,0 +1,105 @@
+input,
+button,
+textarea {
+  appearance: none;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: middle;
+  // line-height: inherit;
+}
+
+// hide up/down-arrows from number field
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+// set placeholder color
+// input, textarea {
+// 	@include placeholder($dark-gray);
+// }
+
+// buttons
+// input[type=submit], input[type=button], button {
+// 	background-color: $medium-gray;
+// }
+
+[type='text'],
+[type='email'],
+[type='search'],
+[type='tel'],
+[type='password'] {
+  height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+// input[type=text], input[type=email], textarea {
+// 	border: 1px solid $light-gray;
+// 	&:focus {
+// 		border-color: $primary-color;
+// 		outline: none;
+// 	}
+// }
+
+select {
+  height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
+  &:focus {
+    border: $input-border-focus;
+    outline: none;
+  }
+  &[disabled='disabled'] {
+    //background-color: $light-gray;
+    color: $medium-gray;
+  }
+}
+
+textarea {
+  padding: 18px;
+  border: $input-border;
+  transition: $input-transition;
+  resize: vertical;
+  min-height: rem-calc(100);
+  &:focus {
+    border: $input-border-focus;
+    box-shadow: $input-shadow-focus;
+  }
+}
+
+.section.bg-gray {
+  [type='text'],
+  [type='email'],
+  [type='search'],
+  [type='tel'],
+  [type='password'] {
+    border-color: darken($light-gray, 8);
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+}
+
+.post-password-form {
+  label {
+    color: $white;
+  }
+  input[name='post_password'] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $black;
+    background-color: $white;
+    text-align: center;
+    &:focus {
+      background-color: $white;
+    }
+  }
+}

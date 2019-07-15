@@ -1,0 +1,114 @@
+$extra-font-sizes: (
+  small: (
+    '.text-huge': 40
+  ),
+  medium: (
+    '.text-huge': 80
+  )
+);
+
+@each $bp, $selectors in $extra-font-sizes {
+  @include breakpoint($bp) {
+    @each $selector, $size in $selectors {
+      #{$selector} {
+        font-size: rem-calc($size);
+      }
+    }
+  }
+}
+
+body {
+  font-feature-settings: 'lnum' 1, 'kern' 1;
+  line-height: $paragraph-lineheight;
+  @include breakpoint(large) {
+    font-size: rem-calc(18);
+  }
+}
+
+// Font weight 300 on Korean alphabet renders poorly
+html[lang="ko-KR"] {
+  body, h1, h2, h3, h4, h5 {
+    font-weight: 400;
+  }
+}
+
+@include selection {
+  background-color: $medium-gray;
+}
+
+@mixin strong {
+  font-weight: $global-weight-bold;
+}
+
+small,
+.small {
+  line-height: $paragraph-lineheight;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h3,
+h4 {
+  a {
+    color: $black;
+  }
+}
+
+a {
+  &:hover {
+    color: $black;
+  }
+}
+
+.lead {
+  font-size: rem-calc(19);
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.meta {
+  color: $medium-gray;
+  a {
+    color: $medium-gray;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h5 {
+  font-weight: $global-weight-normal;
+  font-size: 1rem;
+  line-height: $global-lineheight;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+th,
+strong,
+b,
+.strong {
+  @include strong;
+}
+
+.text-white {
+  color: $white;
+  a {
+    color: $white;
+  }
+}
+.text-on-white {
+  color: $black;
+  a {
+    color: $primary-color;
+  }
+}

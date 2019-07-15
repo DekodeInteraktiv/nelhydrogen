@@ -1,0 +1,74 @@
+$cr-sheet: '../images/check_radio_sheet.png';
+$cr-sheet-x2: '../images/check_radio_sheet-x2.png';
+$cr-size: 19px;
+$cr-sprite-width: $cr-size * 4;
+$cr-sprite-height: $cr-size;
+
+input[type='checkbox'],
+input[type='radio'] {
+  @include visuallyhidden; // make accessible
+
+  & + label {
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  & + label:before {
+    content: ' ';
+    width: $cr-size;
+    height: $cr-size;
+    margin: 0;
+    vertical-align: middle;
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    position: relative;
+    top: -1px;
+    margin-right: 0.5em;
+    @include image-2x(
+      $cr-sheet,
+      $cr-sheet-x2,
+      $cr-sprite-width,
+      $cr-sprite-height
+    );
+  }
+
+  &:hover + label {
+    user-select: none;
+    &:before {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus + label {
+    &:before {
+      opacity: 0.25;
+    }
+  }
+
+  &:disabled + label {
+    cursor: default;
+    &:before {
+      opacity: 0.1;
+    }
+  }
+}
+
+// input[type='checkbox'] + label:before {
+//   background-position: left top;
+// }
+
+input[type='checkbox']:checked + label:before {
+  background-position: -$cr-size top;
+}
+
+input[type='radio'] + label:before {
+  background-position: -($cr-size * 2) top;
+}
+input[type='radio']:checked + label:before {
+  background-position: -($cr-size * 3) top;
+}
+
+input[disabled='disabled'] + label {
+  color: $dark-gray;
+}

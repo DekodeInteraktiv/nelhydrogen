@@ -1,0 +1,7 @@
+wp/*
+local-config.php
+.idea
+debug.log
+content/uploads
+/vendor
+node_modules

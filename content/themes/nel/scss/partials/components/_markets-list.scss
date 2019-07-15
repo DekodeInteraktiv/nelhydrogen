@@ -1,0 +1,126 @@
+.markets-list {
+  &__item {
+    margin-bottom: rem-calc(36);
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    padding: rem-calc(10 10 15 10);
+    border-radius: 5px;
+    transition: background 0.25s ease;
+  }
+
+  &__image {
+    transform: scale(0.95);
+    margin-bottom: rem-calc(12);
+    transition: transform 0.15s $google-ease-default,
+      opacity 0.15s $google-ease-default;
+    opacity: 0.75;
+    img {
+      max-width: rem-calc(100);
+      margin: 0 auto;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $white;
+    background: $true-black;
+    outline: none;
+  }
+
+  &__link:hover &__image {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @include breakpoint(large) {
+    justify-content: center;
+  }
+  @include breakpoint(xlarge) {
+    &__image {
+      img {
+        max-width: rem-calc(120);
+      }
+    }
+  }
+}
+
+.product-flags {
+  margin-top: rem-calc(30);
+  padding-top: rem-calc(15);
+  border-top: 1px solid $light-gray;
+  &__header {
+    margin-bottom: rem-calc(15);
+    text-align: center;
+  }
+  .flag {
+    display: flex;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    padding: rem-calc(20 10);
+    align-items: center;
+    margin-bottom: rem-calc(15);
+    background: $white;
+    transition: box-shadow 0.25s $google-ease-default;
+    &:hover {
+      box-shadow: 0 0 10px rgba($medium-gray, 0.25);
+    }
+    &__image,
+    &__body {
+      width: 100%;
+      max-width: 50%;
+      margin-right: rem-calc(10);
+      margin-left: rem-calc(10);
+    }
+    &__body {
+      margin-top: rem-calc(20);
+      margin-bottom: rem-calc(20);
+    }
+    @include breakpoint(medium only) {
+      flex-flow: row wrap;
+      &__image,
+      &__body {
+        max-width: 100%;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    margin-top: rem-calc(60);
+    padding-top: rem-calc(30);
+    &__header {
+      margin-bottom: rem-calc(30);
+    }
+    .flag {
+      text-align: center;
+      margin-bottom: rem-calc(30);
+    }
+  }
+  @include breakpoint(large) {
+    margin-top: rem-calc(100);
+    padding-top: rem-calc(50);
+    &__header {
+      margin-bottom: rem-calc(50);
+    }
+    .flag {
+      text-align: left;
+      margin-bottom: rem-calc(50);
+    }
+  }
+}
+
+.related-products {
+  .flag {
+    text-align: center;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    padding: rem-calc(20 10 30 10);
+    margin-bottom: rem-calc(20);
+    background: $white;
+    transition: box-shadow 0.25s $google-ease-default;
+    &:hover {
+      box-shadow: 0 0 10px rgba($medium-gray, 0.25);
+    }
+  }
+}

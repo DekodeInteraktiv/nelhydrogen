@@ -1,0 +1,95 @@
+/*
+
+Markup:
+
+.aspect .{bp}-aspect-{key} {
+	.aspect-content {
+	
+	}
+}
+
+*/
+
+// Add as many aspects as you want, the fewer the less CSS
+// put default aspect first
+$aspects: (
+  'landscape': 16 10,
+  'portrait': 3 4,
+  'square': 1 1
+) !default;
+
+// Calculate aspect percentage
+@mixin aspect-calc-ratio($ratio) {
+  > .aspect-content,
+  > .aspect__content {
+    position: absolute;
+  }
+  &:before {
+    display: block;
+    padding-top: percentage(nth($ratio, 2) / nth($ratio, 1));
+  }
+}
+
+// Generate classes
+@mixin aspect-generate-html-classes($size: false) {
+  @each $key, $value in $aspects {
+    @if ($size == false) {
+      .aspect-#{$key} {
+        @include aspect-calc-ratio($value);
+      }
+    } @else {
+      .#{$size}-aspect-#{$key} {
+        @include aspect-calc-ratio($value);
+      }
+    }
+  }
+  .#{$size}-aspect-clear {
+    &:before {
+      display: none;
+    }
+    > .aspect-content {
+      position: static;
+    }
+  }
+}
+
+// Base aspect class to prevent extra markup for every element
+.aspect {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &:before {
+    content: ' ';
+    display: none;
+    width: 100%;
+    height: 0;
+  }
+
+  .js-before-element {
+    width: 100%;
+    height: 0;
+    display: block;
+  }
+
+  &.js-before:before {
+    display: none;
+    content: none;
+  }
+
+  > .aspect-content,
+  > .aspect__content {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Aspect handling based on Foundation 6 breakpoint setup
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @include aspect-generate-html-classes($size: $breakpoint);
+  }
+}

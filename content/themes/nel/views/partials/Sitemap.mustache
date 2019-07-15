@@ -1,0 +1,43 @@
+<div class="Sitemap">
+
+  <div class="row">
+
+    {{#post_hierarchy}}
+      <div class="Sitemap__group column small-12 medium-6 large-4">
+        <div class="Sitemap__card">
+          <div class="Sitemap__header">
+            <h4 class="Sitemap__title">{{type}}</h4>
+            {{#wpml}}
+              <a target="_blank" rel="noopener noreferrer" href="{{wpml.docs.post_translation.url}}">{{wpml.docs.post_translation.title}}</a>
+            {{/wpml}}
+          </div>
+          <ul class="Sitemap__list">
+            {{#posts}}
+              {{> SitemapPost}}
+            {{/posts}}
+          </ul>
+        </div>
+      </div>
+    {{/post_hierarchy}}
+
+    {{#taxonomies}}
+      <div class="Sitemap__group column small-12 medium-6 large-4">
+        <div class="Sitemap__card">
+          <div class="Sitemap__header">
+            <h4 class="Sitemap__title">{{type}}</h4>
+            {{#wpml}}
+              <a target="_blank" rel="noopener noreferrer" href="{{wpml.docs.taxonomy_translation.url}}">{{wpml.docs.taxonomy_translation.title}}</a>
+            {{/wpml}}
+          </div>
+          <ul class="Sitemap__list">
+            {{#terms}}
+              {{> SitemapTerm}}
+            {{/terms}}
+          </ul>
+        </div>
+      </div>
+    {{/taxonomies}}
+
+  </div>
+
+</div>

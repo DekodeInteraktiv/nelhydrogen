@@ -1,0 +1,27 @@
+$basepath: '../' !default;
+$fontpath: $basepath + 'assets/fonts/ffreal/';
+
+@font-face {
+  font-family: 'FF Real Text';
+  src: url($fontpath+'67e36277-3efa-4039-9e85-c20ea280afd8.eot?#iefix');
+  src: url($fontpath+'67e36277-3efa-4039-9e85-c20ea280afd8.eot?#iefix')
+      format('eot'),
+    url($fontpath+'2a61cf7b-0375-4bdf-a2df-24d1f2d407c9.woff2') format('woff2'),
+    url($fontpath+'b75ac790-5960-46c2-bf51-010b7107f3cb.woff') format('woff'),
+    url($fontpath+'81bab72f-5041-46f7-a022-0842928a3b17.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'FF Real Text';
+  src: url($fontpath+'bdd8ea16-a6ad-43d4-b5ea-e59a1974afd3.eot?#iefix');
+  src: url($fontpath+'bdd8ea16-a6ad-43d4-b5ea-e59a1974afd3.eot?#iefix')
+      format('eot'),
+    url($fontpath+'d75fce54-5dde-48ae-9f46-e73058c7959e.woff2') format('woff2'),
+    url($fontpath+'9edd5047-47f0-4e29-a8de-5f89222f04bc.woff') format('woff'),
+    url($fontpath+'3802b365-02a9-4aed-9f65-28ccc97b0c94.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
